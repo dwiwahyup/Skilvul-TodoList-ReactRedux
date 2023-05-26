@@ -1,71 +1,66 @@
-/*For the App Component*/
 .App {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px 0;
-    background-color: whitesmoke;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: whitesmoke;
 }
 
-/*General*/
 button {
-    cursor: pointer
+  cursor: pointer;
 }
 
 .display {
-    display: block
+  display: block;
 }
 
 .flexDisplay {
-    display: flex
+  display: flex;
 }
 
 .noDisplay {
-    display: none
+  display: none;
 }
 
 h3 {
-    font-weight: 500
+  font-weight: 500;
 }
 
-/*TodoList data*/
 .listDiv {
-    padding:0 10px;
-    justify-content: space-around;
-    align-items:center;
+  padding: 0 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .listData {
-    width: 60%;
+  width: 60%;
 }
 
 .listDiv:hover {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 .listData div {
-    padding: 10px;
-    word-break: break-word;
-    text-align: left;
+  padding: 10px;
+  word-break: break-word;
+  text-align: left;
 }
 
 .listStatus {
-    width: 100px;
+  width: 100px;
 }
 
 .doneItems {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
-/*Filter Buttons Div*/
 .filterDiv {
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 30px;
 }
 
-/*For Better View*/
-@media only screen and (max-width:800px) {
-    .App {
-        width: 95%;
-    }
+@media only screen and (max-width: 800px) {
+  .App {
+    width: 95%;
+  }
 }

@@ -1,24 +1,32 @@
 import { useRef } from 'react';
-import store from '../redux/store';
+import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import { addTodo } from '../redux/actions';
+import { useDispatch } from 'react-redux';
 
 function TodoInput() {
+    const dispatch = useDispatch();
     const input = useRef();
-
 
     const handleAddTodo = () => {
         if (input.current.value !== '') {
-            store.dispatch(addTodo(input.current.value));
+            dispatch(addTodo(input.current.value));
             input.current.value = '';
             input.current.focus();
         }
-    }
+    };
 
     return (
-        <div>
-            <input type="text" placeholder="Title" ref={input} autoFocus={true} />
-            <button onClick={handleAddTodo}>ADD</button>
-        </div>
+        <InputGroup className="mb-3">
+            <FormControl
+                type="text"
+                placeholder="Title"
+                ref={input}
+                autoFocus={true}
+            />
+            <Button variant="primary" onClick={handleAddTodo}>
+                Add
+            </Button>
+        </InputGroup>
     );
 }
 
